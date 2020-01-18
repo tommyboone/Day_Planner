@@ -30,6 +30,10 @@
 
 $(document).ready(function(){
 
+const m = moment();
+
+console.log(m.toString());
+
 
 
 
