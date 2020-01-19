@@ -31,8 +31,10 @@
 $(document).ready(function(){
 
 const m = moment();
+console.log(m.format("dddd MMMM DDD YYYY"));
+$('.jumbotron-fluid').append(m.format("dddd MMMM DDD YYYY"));
 
-console.log(m.toString());
+
 
 
 
