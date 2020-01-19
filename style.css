@@ -1,3 +1,18 @@
 .jumbotron-fluid{
     text-align: center;
+    font-weight:bold;
+    font-size: 20px;
+}
+
+.mb-3{
+    padding: 2px 100px 2px 100px;
+    height:100px;
+}
+
+.form-control{
+    height: 100px;
+}
+
+.btn-outline-warning{
+    border-radius:25px;
 }
