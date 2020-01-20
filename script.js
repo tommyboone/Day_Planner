@@ -125,6 +125,7 @@ var hourRow = $("<textarea>");
       $dailyPlanSpn.attr('hour-index',index);
       $dailyPlanSpn.attr('type','text');
       $dailyPlanSpn.attr('class','dailyPlan');
+      $dailyPlanSpn.attr('placeholder', "New Event");
   
       // access index from data array for hour 
       $dailyPlanSpn.val( planTextArr[index] );
