@@ -1,10 +1,12 @@
-.jumbotron-fluid{
+ .jumbotron-fluid{
     text-align: center;
     font-weight:bold;
     font-size: 20px;
-}
 
-.mb-3{
+    width:100%;
+    top:0;
+}
+.planner-row{
     padding: 2px 100px 2px 100px;
     height:100px;
 }
@@ -13,6 +15,112 @@
     height: 100px;
 }
 
-.btn-outline-warning{
+.btn-warning{
     border-radius:25px;
+} 
+ */
+ 
+
+ body {
+  /* font parameters */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+
+  /* added padding to prevent navbar overlap. (100 based on browser inpector of size) */
+  padding-top: 90px;
+  vertical-align: middle;
 }
+
+
+/*  need to make box fit space */
+textarea {
+  background: transparent;
+  border: none;
+  height:100%;
+  width:100%;
+  /* so cursor appears */
+  padding-left: 3px;
+}
+
+.btn{
+    padding:auto;
+    margin:auto;
+}
+
+
+
+.col-md-1, .col-md-2, .col-md-9 {
+  padding: 0;
+}
+
+/* #planner */
+#plannerContainer {
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+  
+  /* provide spaceing around the text */
+ 
+} 
+
+.plannerRow {
+  height: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 1em;
+  line-height: 1.5;
+  
+  padding: 20px 20px 20px 20px;
+}
+
+/* style container with time in it */
+.timeBox {
+  color: black;
+  height:100%;
+  width: 100%;
+  text-align: center;
+  border-radius: 15px 0px 0px 15px;
+  padding: 50 px;
+  display: inline-block;
+  font-size: 1em;
+}
+
+
+.saveIcon {
+  background-color: darkturquoise;
+  color: linen;
+  border-radius: 0px 15px 15px 0px;
+  /* float: right; */
+  font-size: 1.5em;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+
+
+/* media query for screen size to be applied to center text to switch at same time as navbar */
+@media (max-width: 768px) {
+  .container-fluid {
+    /* removes paddding on either side */
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .plannerRow {
+    height: 100%;
+    border-radius: 10;
+    margin: 10px;
+  }
+
+  .saveIcon { border-radius: 0 0 15px 15px; }
+
+  .timeBox { border-radius: 15px 15px 0 0; }
+}
+
+
+div{
+    padding: 10px;
+    margin-bottom:10px;
+}
+
+
