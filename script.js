@@ -5,30 +5,15 @@
 // SO THAT I can manage my time effectively
 
 
-// GIVEN I am using a daily planner to create a schedule
-// WHEN I open the planner
-// THEN the current day is displayed at the top of the calendar
-// WHEN I scroll down
-// THEN I am presented with timeblocks for standard business hours
-// WHEN I view the timeblocks for that day
-// THEN each timeblock is color coded to indicate whether it is in the past, present, or future
-// WHEN I click into a timeblock
-// THEN I can enter an event
-// WHEN I click the save button for that timeblock
-// THEN the text for that event is saved in local storage
-// WHEN I refresh the page
-// THEN the saved events persist
 
 
 // JumboTron w/ title
 // Bootstrap container-fluid
-// Inputs for user to fill in text
-// Each input is in a time block. Every 30 mins? Starting at 9:00am. Ending at 4:30pm.
-// Button append to each input. Save input text to localStorage on click.
+// TextArea for user to fill in text
+// Each textarea is in a time block. Starting at 9:00am. Ending at 5:00p
+// Button append to each input. Save textarea text to localStorage on click.
 // Ability to color code
 // When event is in the past, changes colors
-
-// $(document).ready(function(){
 
 
 $(document).ready(function() {
@@ -36,7 +21,7 @@ $(document).ready(function() {
 console.log(m.format("dddd MMMM DDD YYYY"));
 $('.jumbotron-fluid').append(m.format("dddd MMMM DDD YYYY"));
 
-var hourRow = $("<textarea>");
+
   
     // test flag
     const test = false;
@@ -109,13 +94,13 @@ var hourRow = $("<textarea>");
         ampm = "am";
       }
       
-      // populate timeBox with time
+      
       $timeBoxSpn.text(`${displayHour} ${ampm}`);
   
-      // insert into col inset into timebox
+      
       $rowDiv.append($col2TimeDiv);
       $col2TimeDiv.append($timeBoxSpn);
-      // STOP building Time box portion of row
+  
   
       // START building textarea portion of row
       // build row components
@@ -179,7 +164,7 @@ var hourRow = $("<textarea>");
     };
   
     // saves to local storage
-    // conclick function to listen for user clicks on plan area
+    // onclick function to listen for user clicks on save button
     $(document).on('click','button', function(event) {
       event.preventDefault();  
   
@@ -193,27 +178,15 @@ var hourRow = $("<textarea>");
       planTextArr[$index] = $value;
   
   
-      if (test) { console.log('value ', $value); }
-      if (test) { console.log('index ', $index); }
-      if (test) { console.log('click pta after '+ planTextArr); }
   
       // remove shawdow pulse class
       $(`#saveid-${$index}`).removeClass('shadowPulse');
       localStorage.setItem("storedPlans", JSON.stringify(planTextArr));
     });  
     
-    // function to color save button on change of input
-    $(document).on('change','input', function(event) {
-      event.preventDefault();  
-      if (test) { console.log('onChange'); }
-      if (test) { console.log('id', $(this).attr('hour-index')); }
+
   
-      // neeed to check for save button
+
   
-      let i = $(this).attr('hour-index');
-  
-      // add shawdow pulse class
-      $(`#saveid-${i}`).addClass('shadowPulse');
     });
 
-  });
