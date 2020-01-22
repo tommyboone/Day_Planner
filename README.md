@@ -2,7 +2,8 @@
 # LINK
 https://tommyboone.github.io/Day_Planner/
 
-
+# ScreenShot
+![alt image] Libraries/images/Work_Day_Planner_Screenshot.png
 
 # User Story
 AS AN employee with a busy schedule
