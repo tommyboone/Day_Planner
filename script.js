@@ -1,21 +1,4 @@
 
-// USER STORY:
-// AS AN employee with a busy schedule
-// I WANT to add important events to a daily planner
-// SO THAT I can manage my time effectively
-
-
-
-
-// JumboTron w/ title
-// Bootstrap container-fluid
-// TextArea for user to fill in text
-// Each textarea is in a time block. Starting at 9:00am. Ending at 5:00p
-// Button append to each input. Save textarea text to localStorage on click.
-// Ability to color code
-// When event is in the past, changes colors
-
-
 $(document).ready(function() {
     const m = moment();
 console.log(m.format("dddd MMMM DDD YYYY"));
@@ -158,7 +141,7 @@ $('.jumbotron-fluid').append(m.format("dddd MMMM DDD YYYY"));
         if (test) { console.log("greaterthan"); }
         $hourRow.css("background-color","lightyellow");
       } else {
-        if (test) { console.log("eqaul"); }
+        if (test) { console.log("equal"); }
         $hourRow.css("background-color","lightgreen")
       }
     };
@@ -177,16 +160,10 @@ $('.jumbotron-fluid').append(m.format("dddd MMMM DDD YYYY"));
   
       planTextArr[$index] = $value;
   
-  
-  
       // remove shawdow pulse class
       $(`#saveid-${$index}`).removeClass('shadowPulse');
       localStorage.setItem("storedPlans", JSON.stringify(planTextArr));
     });  
-    
-
-  
-
   
     });
 
