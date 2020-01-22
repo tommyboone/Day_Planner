@@ -3,7 +3,7 @@
 https://tommyboone.github.io/Day_Planner/
 
 # ScreenShot
-! [alt text] (./Libraries/images/Work_Day_Planner_Screenshot.png)
+! [alt text] (Libraries/images/Work_Day_Planner_Screenshot.png)
 
 # User Story
 AS AN employee with a busy schedule
